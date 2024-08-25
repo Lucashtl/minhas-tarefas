@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from 'react-redux'
+
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
+import { container as Container } from './style'
+import EstiloGlobal from './style'
+import store from './store/index'
+import Home from './pages/Home'
+import Cadastro from './pages/cadastro'
+
+const rota = createBrowserRouter([
+  {
+    path: '/',
+    element: <Home />
+  },
+  {
+    path: '/cadastro',
+    element: <Cadastro />
+  }
+])
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Provider store={store}>
+      <EstiloGlobal />
+      <Container>
+        <RouterProvider router={rota} />
+      </Container>
+    </Provider>
+  )
 }
 
-export default App;
+export default App
