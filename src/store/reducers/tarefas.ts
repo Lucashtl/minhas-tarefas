@@ -21,13 +21,6 @@ const initialState: TarefaState = {
       prioridade: enums.Prioridade.NORMAL,
       status: enums.Status.CONCLUIDA,
       descricao: 'revisar o modulo 2'
-    },
-    {
-      id: 3,
-      titulo: 'Estudar Bootstrap',
-      prioridade: enums.Prioridade.IMPORTANTE,
-      status: enums.Status.CONCLUIDA,
-      descricao: 'Teinar criar uma landingPage'
     }
   ]
 }
@@ -83,3 +76,5 @@ const TarefaSlice = createSlice({
 export const { remover, editar, Cadastrar, AlteraStatus } = TarefaSlice.actions
 
 export default TarefaSlice.reducer
+https://minhas-tarefas-lemon-nine.vercel.app/
+
