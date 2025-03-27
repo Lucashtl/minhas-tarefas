@@ -76,5 +76,3 @@ const TarefaSlice = createSlice({
 export const { remover, editar, Cadastrar, AlteraStatus } = TarefaSlice.actions
 
 export default TarefaSlice.reducer
-https://minhas-tarefas-lemon-nine.vercel.app/
-
